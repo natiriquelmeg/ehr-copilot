@@ -1,5 +1,14 @@
 # EHR Copilot
 
+<p align="center">
+  <img src="ehrcopilot.png" alt="EHR Copilot logo" width="160">
+</p>
+
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-3E6B9E.svg" alt="Apache-2.0 license"></a>
+  <img src="https://img.shields.io/badge/Chrome-Manifest%20V3-4285F4.svg" alt="Chrome Manifest V3">
+</p>
+
 ## Español
 
 Extensión de Chrome (side panel, Manifest V3) con una biblioteca local de indicaciones
