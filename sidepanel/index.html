@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EHR Copilot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <strong>EHR Copilot</strong>
+    <span class="row-end">
+      <span id="status" class="status" data-i18n="disconnected">No conectado</span>
+      <select id="locale" class="locale-select" data-i18n-title="language" data-i18n-aria="language">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+      </select>
+      <button id="refresh" data-i18n-title="reconnect" data-i18n-aria="reconnect">↻</button>
+      <button id="settings" data-i18n-title="settings" data-i18n-aria="settings">⚙</button>
+    </span>
+  </header>
+
+  <nav id="tabs">
+    <button data-tab="indicaciones" class="active" data-i18n="texts">Textos</button>
+    <button data-tab="medicamentos" data-i18n="medications">Medicamentos</button>
+  </nav>
+
+  <main>
+    <section id="lib">
+      <div class="row">
+        <input id="search" type="search" data-i18n-placeholder="search" placeholder="Buscar…">
+        <button id="new" class="primary" data-i18n="new">+ Nuevo</button>
+      </div>
+      <div id="capture" class="row" hidden>
+        <select id="cap-field"></select>
+        <button id="cap-one" data-i18n="capture">Capturar</button>
+        <button id="cap-meds" hidden data-i18n="importPrescription">Importar de la receta</button>
+      </div>
+      <div id="tagbar" class="tags" hidden></div>
+      <ul id="list"></ul>
+    </section>
+
+    <form id="editor" hidden></form>
+
+    <section id="ajustes" hidden>
+      <p class="hint" data-i18n="localData">Tus datos viven solo en este navegador. Exporta un respaldo de vez en cuando.</p>
+      <p class="hint" data-i18n="localMappings">Los perfiles de mapeo de las fichas también se guardan localmente en este navegador.</p>
+      <h3 data-i18n="profiles">Perfiles de ficha</h3>
+      <div id="mapping-list"></div>
+      <button id="start-mapping" type="button" data-i18n="mapActive">+ Mapear ficha activa</button>
+      <form id="mapping-editor" hidden></form>
+      <div class="row">
+        <button id="s-export" data-i18n="exportJson">Exportar JSON</button>
+        <button id="s-import" data-i18n="importJson">Importar JSON</button>
+        <input id="s-file" type="file" accept="application/json" hidden>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" role="status"></div>
+  <script type="module" src="panel.js"></script>
+</body>
+</html>
