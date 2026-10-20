@@ -48,6 +48,7 @@ El selector manual solo mapea campos de texto. La detección de datos del pacien
 - Los perfiles de mapeo se guardan localmente y solo describen elementos de la interfaz de la ficha.
 - El nombre del proveedor es un dato opcional del perfil local; la persona que usa la extensión puede asignarlo o cambiarlo en Ajustes.
 - La extensión pide acceso temporal únicamente a la pestaña que la profesional abre; no mantiene permisos permanentes por dominio.
+- Consulta la [política de privacidad](https://natiriquelmeg.github.io/ehr-copilot/privacy.html).
 
 ## Pendiente
 
@@ -96,6 +97,7 @@ The manual picker currently maps text fields only. Patient-data detection and me
 - Mapping profiles are local and describe interface elements only.
 - The provider name is optional local profile metadata; it can be set or changed in Settings.
 - The extension requests temporary access only to the tab the clinician opens. It does not keep permanent site permissions.
+- Read the [privacy policy](https://natiriquelmeg.github.io/ehr-copilot/privacy.html).
 
 ### Current limitations
 
